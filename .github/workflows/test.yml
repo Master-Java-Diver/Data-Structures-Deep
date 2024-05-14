@@ -18,7 +18,7 @@ jobs:
         java-version: '11'
         
     - name: Gradle 빌드 및 테스트
-      run: ./gradlew test --info
+      run: chmod +x ./gradlew && ./gradlew test --info
       
     - name: 테스트 결과를 댓글로 추가
       uses: actions/github-script@0.9.0
