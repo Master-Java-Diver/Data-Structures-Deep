@@ -19,35 +19,10 @@ jobs:
         distribution: 'corretto'
         
     - name: Gradle 빌드 및 테스트
-      run: chmod +x ./gradlew && ./gradlew test --info
+      run: chmod +x ./gradlew && ./gradlew build
       
     - name: 테스트 결과를 댓글로 추가
-      uses: actions/github-script@0.9.0
+      uses: EnricoMi/publish-unit-test-result-action@v1
+      if: ${{ always() }}
       with:
-        github-token: ${{ secrets.TOKEN_GITHUB }}
-        script: |
-          const fs = require('fs');
-          const { context } = require('@actions/github');
-          
-          const testReport = fs.readFileSync('./build/reports/tests/test/index.html', 'utf8');
-          
-          // 테스트 통과율을 추출
-          const passRateRegex = /Pass rate: (\d+\.\d+)%/;
-          const passRateMatch = testReport.match(passRateRegex);
-          const passRate = passRateMatch ? passRateMatch[1] : 'N/A';
-          
-          const prNumber = context.payload.pull_request.number;
-          const repoToken = process.env.GITHUB_TOKEN;
-          
-          const octokit = require('@octokit/rest')();
-          octokit.authenticate({
-            type: 'token',
-            token: repoToken,
-          });
-          
-          octokit.issues.createComment({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            issue_number: prNumber,
-            body: `테스트 통과율: ${passRate}%`,
-          });
+        files: ./build/test-results/**/*.xml
