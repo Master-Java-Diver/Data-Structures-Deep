@@ -1,9 +1,9 @@
 package List.ArrayList;
 
 import List.List;
-
 import java.util.ArrayList;
 
+@JavaDiverCustomArrayList
 public class ArrayList_name<E> implements List<E> {
 
     // 구현시 삭제
