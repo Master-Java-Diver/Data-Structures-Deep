@@ -5,12 +5,12 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-public class ArrayListTest_name {
+public class ArrayListTest_JAEKWANG97 {
 
     @Test
     void ArrayList의_생성_및_초기화() {
         // 구현 후 수정
-        List<Integer> list = new ArrayList_name<Integer>();
+        List<Integer> list = new ArrayList_JAEKWANG97<Integer>();
 
         assertThat(list).isNotNull();
     }
