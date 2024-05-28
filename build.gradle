@@ -11,8 +11,10 @@ repositories {
 
 dependencies {
     implementation 'org.apache.groovy:groovy:4.0.14'
+
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'org.reflections:reflections:0.10.2'
     testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.25.3'
 }
 
