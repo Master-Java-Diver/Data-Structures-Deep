@@ -42,4 +42,12 @@ public interface Stack<E> {
      * @return 스택에 있는 요소의 수
      */
     int size();
+
+    /**
+     * 스택에서 주어진 요소가 저장된 위치를 반환합니다.
+     * 
+     * @param item 스택에서 찾을 요소
+     * @return 스택에서 요소가 저장된 위치
+     */
+    int search(E item);
 }

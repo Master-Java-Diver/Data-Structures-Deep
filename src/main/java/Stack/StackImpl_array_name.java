@@ -32,6 +32,11 @@ public class StackImpl_array_name<E> implements Stack<E> {
         return stack.size();
     }
 
+    @Override
+    public int search(E item) {
+        return stack.search(item);
+    }
+
     public void resize() {
         // 용량이 꽉 찬 경우
 

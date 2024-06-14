@@ -37,4 +37,9 @@ public class StackImpl_list_name<E> implements Stack<E> {
         return stack.size();
     }
 
+    @Override
+    public int search(E item) {
+        return stack.search(item);
+    }
+
 }
