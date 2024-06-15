@@ -20,8 +20,8 @@ public class LinkedListFactory<E> {
 
         try {
             return (List<E>) Class.forName(clazz.getCanonicalName()).getDeclaredConstructor().newInstance();
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | InvocationTargetException |
-                 NoSuchMethodException e) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | InvocationTargetException
+                | NoSuchMethodException e) {
             throw new RuntimeException(e);
         }
     }

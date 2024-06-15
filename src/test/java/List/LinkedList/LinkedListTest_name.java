@@ -1,5 +1,6 @@
 package List.LinkedList;
 
+import static id.ID.JAEKWANG97;
 import static id.ID.name;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
@@ -14,8 +15,8 @@ public class LinkedListTest_name {
 
     @BeforeEach
     void init() {
-        //깃허브 아이디 입력하면 각자 만든 리스트 객체 생성
-        list = factory.createList(name);
+        // 깃허브 아이디 입력하면 각자 만든 리스트 객체 생성
+        list = factory.createList(JAEKWANG97);
     }
 
     @Test
@@ -38,7 +39,6 @@ public class LinkedListTest_name {
         assertThat(list.get(3)).isEqualTo(22);
         assertThat(list.get(4)).isEqualTo(33);
     }
-
 
     @Test
     void 데이터_5개_저장_후_22인_데이터_모두_삭제() {
