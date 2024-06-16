@@ -1,11 +1,13 @@
 package Stack;
 
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import java.util.EmptyStackException;
 
-public class StackTest_name {
+import static org.junit.jupiter.api.Assertions.*;
+
+public class StackTest_hellomatia {
     private Stack<Integer> stack_arr;
     private Stack<Integer> stack_list;
 
