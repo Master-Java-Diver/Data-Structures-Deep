@@ -9,6 +9,6 @@ public class StackFactory {
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
     public static Stack<Integer> createStack_list() {
-        return new StackImpl_list_name();
+        return new Stack_list_hellomatia();
     }
 }
