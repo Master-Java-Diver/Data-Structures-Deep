@@ -16,6 +16,7 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testImplementation 'org.reflections:reflections:0.10.2'
     testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.25.3'
+    implementation group: 'org.reflections', name: 'reflections', version: '0.10.2'
 }
 
 compileJava.options.encoding = 'UTF-8'
